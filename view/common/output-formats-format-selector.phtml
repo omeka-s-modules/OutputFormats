@@ -1,0 +1,10 @@
+<div class="output-formats-selector" data-url="<?php echo $this->escapeHtml($url); ?>" data-query="<?php echo $this->escapeHtml($query); ?>">
+    <select class="output-formats-select">
+        <option value="jsonld"><?php echo $this->translate('JSON-LD (application/ld+json)'); ?></option>
+        <option value="n3"><?php echo $this->translate('Notation3 (text/n3)'); ?></option>
+        <option value="ntriples"><?php echo $this->translate('N-Triples (application/n-triples)'); ?></option>
+        <option value="rdfxml"><?php echo $this->translate('RDF/XML (application/rdf+xml)'); ?></option>
+        <option value="turtle"><?php echo $this->translate('Turtle (text/turtle)'); ?></option>
+    </select>
+    <button class="output-formats-button" type="button"><?php echo $this->translate('View format'); ?></button>
+</div>
