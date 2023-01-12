@@ -75,7 +75,7 @@ class Module extends AbstractModule
                     $view->headScript()->appendFile($view->assetUrl('js/output-formats.js', 'OutputFormats'));
                     echo $view->partial('common/output-formats-format-selector', [
                         'url' => $view->url(
-                            'api/default',
+                            'api-local/default',
                             [
                                 'resource' => $selector['resource'],
                                 'id' => $view->params()->fromRoute('id'),
