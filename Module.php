@@ -14,7 +14,7 @@ class Module extends AbstractModule
 
     public function attachListeners(SharedEventManagerInterface $sharedEventManager)
     {
-        /**
+        /*
          * Render output format selectors.
          */
         $services = $this->getServiceLocator();
@@ -24,8 +24,9 @@ class Module extends AbstractModule
             $sharedEventManager->attach(
                 $selector['controller'],
                 $selector['event'],
-                function (Event $event) use ($selector, $services) {
+                function (Event $event) use ($selector) {
                     // Check if this selector should be rendered.
+                    $services = $this->getServiceLocator();
                     $status = $services->get('Omeka\Status');
                     if ($status->isSiteRequest()) {
                         $addSelectorsSite = $services
@@ -38,23 +39,19 @@ class Module extends AbstractModule
                     }
                     // Render the selector.
                     $view = $event->getTarget();
-                    echo $view->partial('common/output-formats-format-selector', [
-                        'url' => $view->url(
-                            'api-local/default',
-                            [
-                                'resource' => $selector['resource'],
-                                'id' => $view->params()->fromRoute('id'),
-                            ],
-                            [
-                                'force_canonical' => true,
-                            ]
-                        ),
-                        'query' => json_encode($view->params()->fromQuery(), JSON_FORCE_OBJECT),
-                    ]);
+                    $query = $view->params()->fromQuery();
+                    if ($status->isSiteRequest()) {
+                        $query['site_id'] = $view->currentSite()->id();
+                    }
+                    echo $view->outputFormatsSelector(
+                        $selector['resource'],
+                        $view->params()->fromRoute('id'),
+                        $query
+                    );
                 }
             );
         }
-        /**
+        /*
          * Add site settings.
          */
         $sharedEventManager->attach(
@@ -80,7 +77,6 @@ class Module extends AbstractModule
                         'value' => $siteSettings->get('output_formats_add_selectors_site'),
                     ],
                 ]);
-
             }
         );
     }

@@ -70,4 +70,9 @@ return [
             sprintf('%s/../view', __DIR__),
         ],
     ],
+    'view_helpers' => [
+        'invokables' => [
+            'outputFormatsSelector' => ViewHelper\OutputFormatsSelector::class,
+        ],
+    ],
 ];
