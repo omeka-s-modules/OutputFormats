@@ -6,6 +6,7 @@ $('button.output-formats-button').on('click', function(e) {
     const url = new URL(selector.data('url'));
     const query = selector.data('query');
     query.format = select.val();
+    // The jsonld format requires special treatment to pretty print.
     if ('jsonld' === select.val()) {
         query.pretty_print = 1;
     }
