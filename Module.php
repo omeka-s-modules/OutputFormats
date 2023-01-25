@@ -71,7 +71,7 @@ class Module extends AbstractModule
                     'name' => 'output_formats_add_selectors_site',
                     'options' => [
                         'element_group' => 'output_formats',
-                        'label' => 'Add output format selector to resource pages',
+                        'label' => 'Add output format selector to resource pages', // @translate
                     ],
                     'attributes' => [
                         'value' => $siteSettings->get('output_formats_add_selectors_site'),
