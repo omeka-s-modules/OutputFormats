@@ -42,8 +42,17 @@ class Module extends AbstractModule
                     $view = $event->getTarget();
                     $query = $view->params()->fromQuery();
                     if ($status->isSiteRequest()) {
+                        // Limit results to the current site.
                         $query['site_id'] = $view->currentSite()->id();
+                        // Respect the site's pagination_per_page setting.
                         $query['per_page'] = $siteSettings->get('pagination_per_page');
+                        // In sites, an item set page is a special item browse page
+                        // that routes to the item controller. Here we add the item
+                        // set ID to the query if it exists as route param.
+                        $itemSetId = $view->params()->fromRoute('item-set-id');
+                        if ($itemSetId) {
+                            $query['item_set_id[]'] = $itemSetId;
+                        }
                     }
                     echo $view->outputFormatsSelector(
                         $selector['resource'],
