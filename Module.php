@@ -20,11 +20,12 @@ class Module extends AbstractModule
         $services = $this->getServiceLocator();
         $config = $services->get('Config');
         $selectors = $config['output_formats_selectors'];
+        $siteSettings = $services->get('Omeka\Settings\Site');
         foreach ($selectors as $selector) {
             $sharedEventManager->attach(
                 $selector['controller'],
                 $selector['event'],
-                function (Event $event) use ($selector) {
+                function (Event $event) use ($selector, $siteSettings) {
                     // Check if this selector should be rendered.
                     $services = $this->getServiceLocator();
                     $status = $services->get('Omeka\Status');
@@ -42,6 +43,7 @@ class Module extends AbstractModule
                     $query = $view->params()->fromQuery();
                     if ($status->isSiteRequest()) {
                         $query['site_id'] = $view->currentSite()->id();
+                        $query['per_page'] = $siteSettings->get('pagination_per_page');
                     }
                     echo $view->outputFormatsSelector(
                         $selector['resource'],
