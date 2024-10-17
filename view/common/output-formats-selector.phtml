@@ -2,7 +2,11 @@
 $this->headLink()->appendStylesheet($this->assetUrl('css/output-formats.css', 'OutputFormats'));
 $this->headScript()->appendFile($this->assetUrl('js/output-formats.js', 'OutputFormats'));
 ?>
-<div class="output-formats-selector" data-url="<?php echo $this->escapeHtml($url); ?>" data-query="<?php echo $this->escapeHtml($query); ?>">
+<div class="output-formats-selector meta-group" data-url="<?php echo $this->escapeHtml($url); ?>" data-query="<?php echo $this->escapeHtml($query); ?>">
+    <?php if ($this->status()->isAdminRequest()): ?>
+    <h4><?php echo $this->translate('Output formats'); ?></h4>
+    <?php endif; ?>
+    <div class="value">
     <select class="output-formats-select">
         <option value="jsonld"><?php echo $this->translate('JSON-LD (application/ld+json)'); ?></option>
         <option value="n3"><?php echo $this->translate('Notation3 (text/n3)'); ?></option>
@@ -11,4 +15,5 @@ $this->headScript()->appendFile($this->assetUrl('js/output-formats.js', 'OutputF
         <option value="turtle"><?php echo $this->translate('Turtle (text/turtle)'); ?></option>
     </select>
     <button class="output-formats-button" type="button"><?php echo $this->translate('View in the selected format'); ?></button>
+    </div>
 </div>
