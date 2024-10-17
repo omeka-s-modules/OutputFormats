@@ -1,0 +1,6 @@
+.output-formats-select,
+.output-formats-button {
+    display: inline-block;
+    margin: 0 .5rem .5rem 0;
+    width: auto;
+}
