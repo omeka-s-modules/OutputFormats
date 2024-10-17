@@ -59,7 +59,9 @@ class Module extends AbstractModule
                         $view->params()->fromRoute('id'),
                         $query
                     );
-                }
+                },
+                // Execute with a low priority so the control is at the bottom.
+                -100
             );
         }
         /*

@@ -12,7 +12,7 @@ return [
         [
             'resource' => 'items',
             'controller' => 'Omeka\Controller\Admin\Item',
-            'event' => 'view.show.after',
+            'event' => 'view.show.sidebar',
         ],
         [
             'resource' => 'item_sets',
@@ -22,7 +22,7 @@ return [
         [
             'resource' => 'item_sets',
             'controller' => 'Omeka\Controller\Admin\ItemSet',
-            'event' => 'view.show.after',
+            'event' => 'view.show.sidebar',
         ],
         [
             'resource' => 'media',
@@ -32,7 +32,7 @@ return [
         [
             'resource' => 'media',
             'controller' => 'Omeka\Controller\Admin\Media',
-            'event' => 'view.show.after',
+            'event' => 'view.show.sidebar',
         ],
         // Site selectors
         [
