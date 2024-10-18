@@ -1,6 +1,24 @@
 .output-formats-select,
 .output-formats-button {
     display: inline-block;
-    margin: 0 .5rem .5rem 0;
+    margin-bottom: .5rem;
     width: auto;
+}
+
+.output-formats-select {
+    margin-right: .25rem;
+}
+
+.sidebar .output-formats-select {
+    width: auto;
+}
+
+.browse .output-formats-selector {
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+.browse .output-formats-selector h4 {
+    display: none;
 }
