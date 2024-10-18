@@ -5,6 +5,12 @@
     width: auto;
 }
 
+.output-formats-selector {
+    display: inline-flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
 .output-formats-select {
     margin-right: .25rem;
 }
@@ -13,10 +19,9 @@
     width: auto;
 }
 
-.browse .output-formats-selector {
-    display: flex;
-    flex-wrap: wrap;
-    float: right;
+.sidebar .output-formats-selector {
+    display: block;
+    float: none;
 }
 
 .browse .output-formats-selector h4 {
