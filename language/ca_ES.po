@@ -11,10 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-25 14:39-0500\n"
+"POT-Creation-Date: 2024-10-28 14:29-0400\n"
 "PO-Revision-Date: 2023-01-13 18:45+0000\n"
 "Last-Translator: Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2023\n"
-"Language-Team: Catalan (Spain) (https://www.transifex.com/omeka/teams/14184/ca_ES/)\n"
+"Language-Team: Catalan (Spain) (https://app.transifex.com/omeka/teams/14184/ca_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,33 +22,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: view/common/output-formats-selector.phtml:7
+msgid "Output formats"
+msgstr ""
+
+#: view/common/output-formats-selector.phtml:11
 msgid "JSON-LD (application/ld+json)"
 msgstr "JSON-LD (application/ld+json)"
 
-#: view/common/output-formats-selector.phtml:8
+#: view/common/output-formats-selector.phtml:12
 msgid "Notation3 (text/n3)"
 msgstr "Notation3 (text/n3)"
 
-#: view/common/output-formats-selector.phtml:9
+#: view/common/output-formats-selector.phtml:13
 msgid "N-Triples (application/n-triples)"
 msgstr "N-Triples (application/n-triples)"
 
-#: view/common/output-formats-selector.phtml:10
+#: view/common/output-formats-selector.phtml:14
 msgid "RDF/XML (application/rdf+xml)"
 msgstr "RDF/XML (application/rdf+xml)"
 
-#: view/common/output-formats-selector.phtml:11
+#: view/common/output-formats-selector.phtml:15
 msgid "Turtle (text/turtle)"
 msgstr "Turtle (text/turtle)"
 
-#: view/common/output-formats-selector.phtml:13
+#: view/common/output-formats-selector.phtml:17
 msgid "View in the selected format"
-msgstr ""
+msgstr "Veure en el format seleccionat"
 
-#: Module.php:66
+#: Module.php:79
 msgid "Output Formats"
 msgstr "Formats de sortida"
 
-#: Module.php:74
-msgid "Add output format selector to resource pages"
+#: Module.php:87
+msgid "Add output format selector to public resource pages"
 msgstr ""

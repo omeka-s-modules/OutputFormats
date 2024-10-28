@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Alfonso Montejo <almontejor@gmail.com>, 2023
+# Deidson Rafael Trindade <drafael@usp.br>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -13,13 +13,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-28 14:29-0400\n"
 "PO-Revision-Date: 2023-01-13 18:45+0000\n"
-"Last-Translator: Alfonso Montejo <almontejor@gmail.com>, 2023\n"
-"Language-Team: Spanish (https://app.transifex.com/omeka/teams/14184/es/)\n"
+"Last-Translator: Deidson Rafael Trindade <drafael@usp.br>, 2024\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/omeka/teams/14184/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: view/common/output-formats-selector.phtml:7
 msgid "Output formats"
@@ -47,11 +47,11 @@ msgstr "Turtle (text/turtle)"
 
 #: view/common/output-formats-selector.phtml:17
 msgid "View in the selected format"
-msgstr "Ver en el formato seleccionado"
+msgstr "Visualizar no formato selecionado"
 
 #: Module.php:79
 msgid "Output Formats"
-msgstr "Formatos de salida"
+msgstr "Formatos de saída"
 
 #: Module.php:87
 msgid "Add output format selector to public resource pages"
